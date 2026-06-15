@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b322bb2k68yhn"]
+
+[ext_resource type="Script" uid="uid://bjmbcyil1bc1q" path="res://scenes/pause.gd" id="1_f1d2v"]
+
+[node name="Pause" type="Node2D" unique_id=1718149971]
+script = ExtResource("1_f1d2v")
+
+[node name="PauseMenu" type="Control" parent="." unique_id=1365136568]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UnPause" type="Button" parent="PauseMenu" unique_id=1080041701]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 121.0
+offset_right = 419.0
+offset_bottom = 156.0
+text = "Unpause Game"
+
+[node name="ReturnMenu" type="Button" parent="PauseMenu" unique_id=1898343157]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 195.0
+offset_right = 419.0
+offset_bottom = 230.0
+text = "Exit to Menu"
+
+[node name="Label" type="Label" parent="PauseMenu" unique_id=684389279]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 30.0
+offset_right = 373.0
+offset_bottom = 57.0
+text = "PAUSED"
+
+[connection signal="pressed" from="PauseMenu/UnPause" to="." method="_on_un_pause_pressed"]
+[connection signal="pressed" from="PauseMenu/ReturnMenu" to="." method="_on_return_menu_pressed"]

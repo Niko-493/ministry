@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b2fbas7gmg6cd"]
+
+[ext_resource type="Script" uid="uid://vukj6l7hc417" path="res://scripts/level_select.gd" id="1_3shnc"]
+
+[node name="LevelSelect" type="Node2D" unique_id=1592450432]
+process_mode = 3
+script = ExtResource("1_3shnc")
+
+[node name="ButtonManager" type="Control" parent="." unique_id=1343484479]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Level1" type="Button" parent="ButtonManager" unique_id=1965441081]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 98.0
+offset_right = 396.0
+offset_bottom = 126.0
+text = "Level 1"
+
+[node name="Return" type="Button" parent="ButtonManager" unique_id=182715862]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 89.0
+offset_bottom = 26.0
+text = "Return"
+
+[connection signal="pressed" from="ButtonManager/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="ButtonManager/Return" to="." method="_on_return_pressed"]
