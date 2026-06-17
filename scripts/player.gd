@@ -43,16 +43,16 @@ func get_input():
 				
 	if Input.is_action_pressed('move_right'):
 		input.x += 1
-		$AnimatedSprite2D2.play('walk_left')
+		$AnimatedSprite2D.play('walk')
 	if Input.is_action_pressed('move_left'):
 		input.x -= 1
-		$AnimatedSprite2D2.play('walk_left')
+		$AnimatedSprite2D.play('walk')
 	if Input.is_action_pressed('move_down'):
 		input.y += 1
-		$AnimatedSprite2D2.play('walk_down')
+		$AnimatedSprite2D.play('walk')
 	if Input.is_action_pressed('move_up'):
 		input.y -= 1
-		$AnimatedSprite2D2.play('walk_up')
+		$AnimatedSprite2D.play('walk')
 	
 	if Input.is_action_just_pressed("reload"):
 		if spare_mag >=1:
