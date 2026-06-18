@@ -25,6 +25,7 @@ func die():
 	$CollisionShape2D.disabled = true
 	$CollisionShape2D2.disabled = true
 	print("enemy died")
+	
 
 func enemy_fire():
 	if randf() < 0.8:

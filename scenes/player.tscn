@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://chwemf3gx2x6" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://rh6q7ehpnl3f" path="res://assets/player/Spritesheetmaryja1.png" id="2_qlg0r"]
-[ext_resource type="AudioStream" uid="uid://da4w8svp32iul" path="res://assets/Gun1.ogg" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://c5y1edkbe66oy" path="res://assets/sfx/sniper.ogg" id="3_qlg0r"]
 [ext_resource type="AudioStream" uid="uid://ioc1t3f3cg5y" path="res://assets/Equip1.ogg" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bywh22w54e8bs" path="res://assets/wipmuzzleflash.png" id="5_qlg0r"]
 
@@ -92,7 +92,7 @@ target_position = Vector2(1000, 0)
 collide_with_areas = true
 
 [node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=8528024]
-stream = ExtResource("3_qhqgy")
+stream = ExtResource("3_qlg0r")
 
 [node name="ReloadSound" type="AudioStreamPlayer2D" parent="." unique_id=869512756]
 stream = ExtResource("4_dqkch")

@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://crwlqenfdwmk5"]
 
 [ext_resource type="Texture2D" uid="uid://bvdrfp7tx04ug" path="res://assets/wiptileset.png" id="1_sugp2"]
-[ext_resource type="PackedScene" uid="uid://c6j82aopfh2nk" path="res://scenes/player.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://c6j82aopfh2nk" path="res://scenes/player/ryhor.tscn" id="2_pa8r4"]
 [ext_resource type="Script" uid="uid://venws50xx1oe" path="res://scripts/ui.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bdsoha8t3xrle" path="res://scenes/enemy.tscn" id="4_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://jsvtt7045xfu" path="res://assets/wipcrosshair.png" id="5_tbgi4"]
@@ -89,13 +89,12 @@ z_index = 2
 tile_map_data = PackedByteArray("AAAHAAMAAAACAAAAAAAKAAMAAAABAAAAAAAhAPX/AAAHAAAAAAAlAPX/AAAJAAAAAAAoAPb/AAAIAAAAAAAnAP//AAACAAAAAAAbAP//AAACAAAAAAALABcAAAACAAAAAAAWAP//AAABAAAAAAAgAP//AAABAAAAAAAiAAkAAAABAAAAAAASAAUAAAACAAAAAFASAP//AAABAAAAAAAPAP//AAACAAAAAAAgAA4AAAACAAAAAFAaAA8AAAACAAAAADAmAAcAAAAEAAAAAAA=")
 tile_set = SubResource("TileSet_tefeu")
 
-[node name="Player" parent="." unique_id=1019906128 instance=ExtResource("2_0wfyh")]
-z_index = 3
-position = Vector2(123, 143)
+[node name="Ryhor" parent="." unique_id=1019906128 instance=ExtResource("2_pa8r4")]
+position = Vector2(94, 98)
 scale = Vector2(0.5, 0.5)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2116112871]
-position = Vector2(-7, 0)
+[node name="Camera2D" type="Camera2D" parent="Ryhor" unique_id=2116112871]
+position = Vector2(-8, 0)
 zoom = Vector2(1.5, 1.5)
 
 [node name="Enemies" type="Node" parent="." unique_id=124121157]
@@ -158,6 +157,5 @@ scale = Vector2(0.5, 0.5)
 navigation_polygon = SubResource("NavigationPolygon_jyhfs")
 
 [node name="Crosshair" type="Sprite2D" parent="." unique_id=123419632]
-visibility_layer = 2
 texture = ExtResource("5_tbgi4")
 script = ExtResource("6_tefeu")

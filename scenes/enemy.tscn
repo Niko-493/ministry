@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://rwnmpdthd412" path="res://assets/enemy.png" id="1_7p1mj"]
 [ext_resource type="Script" uid="uid://bls8d7tcc36x8" path="res://scripts/enemy.gd" id="1_md0e3"]
-[ext_resource type="AudioStream" uid="uid://da4w8svp32iul" path="res://assets/Gun1.ogg" id="3_4ra3w"]
+[ext_resource type="AudioStream" uid="uid://bc0ckts3b57il" path="res://assets/sfx/rifle.ogg" id="3_5uy6h"]
 [ext_resource type="Texture2D" uid="uid://bywh22w54e8bs" path="res://assets/wipmuzzleflash.png" id="4_5uy6h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7p1mj"]
@@ -28,7 +28,7 @@ position = Vector2(21.5, -15.5)
 shape = SubResource("RectangleShape2D_5uy6h")
 
 [node name="EnemyShoot" type="AudioStreamPlayer2D" parent="." unique_id=1703552767]
-stream = ExtResource("3_4ra3w")
+stream = ExtResource("3_5uy6h")
 volume_db = -5.0
 
 [node name="EnemyRaycast" type="RayCast2D" parent="." unique_id=1460014100]
