@@ -11,11 +11,14 @@ extends CharacterBody2D
 @onready var muzzle_flash: Sprite2D = $MuzzleFlash
 @onready var muzzle_flash_timer: Timer = $MuzzleFlashTimer
 @onready var enemies = get_tree().get_nodes_in_group("Enemies")
-@onready var crosshair: Sprite2D = $"../Crosshair"
+@onready var crosshair: Sprite2D = $Crosshair
+@onready var hitmarker_timer: Timer = $HitmarkerTimer
+@onready var reload_timer: Timer = $ReloadTimer
 
 var player_health = 100
-var ammo = 15
-var spare_mag = 5
+var ammo = 11
+var spare_mag = 8
+var is_reloading = false
 
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -29,19 +32,21 @@ func get_input():
 		for e in enemies:
 			if randf() < 0.01:
 				e.enemy_idle = false
-		if ammo >= 1:
-			ammo -= 1
-			shoot_sound.play()
-			muzzle_flash.visible = true
-			muzzle_flash_timer.start()
-			update_ammo_ui()
-			if raycast_shoot.is_colliding():
-				var collider = raycast_shoot.get_collider()
-				if collider is TileMapLayer:
-					pass
-				elif collider is CharacterBody2D:
-					collider.enemy_health -= 100
-					crosshair.modulate = Color.RED
+		if is_reloading == false:
+			if ammo >= 1:
+				ammo -= 1
+				shoot_sound.play()
+				muzzle_flash.visible = true
+				muzzle_flash_timer.start()
+				update_ammo_ui()
+				if raycast_shoot.is_colliding():
+					var collider = raycast_shoot.get_collider()
+					if collider is TileMapLayer:
+						pass
+					elif collider is CharacterBody2D:
+						collider.enemy_health -= 100
+						crosshair.modulate = Color.RED
+						hitmarker_timer.start()
 				
 	if Input.is_action_pressed('move_right'):
 		input.x += 1
@@ -58,11 +63,14 @@ func get_input():
 	
 	if Input.is_action_just_pressed("reload"):
 		if spare_mag >=1:
-			ammo = 15
+			ammo = 11
 			spare_mag -= 1
 			update_ammo_ui()
 			reload_sound.play()
 			$AnimatedSprite2D.play('reload')
+			is_reloading = true
+			reload_timer.start()
+			
 	return input
 
 func _physics_process(delta):
@@ -88,4 +96,10 @@ func update_health_ui():
 	
 func _on_muzzle_flash_timer_timeout():
 	muzzle_flash.visible = false
+	
+	
+func _on_hitmarker_timer_timeout():
 	crosshair.modulate = Color.WHITE
+
+func _on_reload_timer_timeout() -> void:
+	is_reloading = false

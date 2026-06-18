@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://c5y1edkbe66oy" path="res://assets/sfx/sniper.ogg" id="3_qlg0r"]
 [ext_resource type="AudioStream" uid="uid://ioc1t3f3cg5y" path="res://assets/Equip1.ogg" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bywh22w54e8bs" path="res://assets/wipmuzzleflash.png" id="5_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://jsvtt7045xfu" path="res://assets/wipcrosshair.png" id="7_ngjgx"]
+[ext_resource type="Script" uid="uid://cpi5so5iyp352" path="res://scripts/crosshair.gd" id="8_72et8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1m3v6"]
 atlas = ExtResource("2_w3ibv")
@@ -174,8 +176,21 @@ position = Vector2(33, 7.0000005)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("5_qlg0r")
 
+[node name="Crosshair" type="Sprite2D" parent="." unique_id=7570117]
+texture = ExtResource("7_ngjgx")
+script = ExtResource("8_72et8")
+
 [node name="MuzzleFlashTimer" type="Timer" parent="." unique_id=179007942]
 wait_time = 0.05
 one_shot = true
 
+[node name="ReloadTimer" type="Timer" parent="." unique_id=217015817]
+one_shot = true
+
+[node name="HitmarkerTimer" type="Timer" parent="." unique_id=1640146448]
+wait_time = 0.05
+one_shot = true
+
 [connection signal="timeout" from="MuzzleFlashTimer" to="." method="_on_muzzle_flash_timer_timeout"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]
+[connection signal="timeout" from="HitmarkerTimer" to="." method="_on_hitmarker_timer_timeout"]
