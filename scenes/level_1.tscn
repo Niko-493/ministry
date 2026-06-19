@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bvdrfp7tx04ug" path="res://assets/wiptileset.png" id="1_sugp2"]
 [ext_resource type="Texture2D" uid="uid://c5y1dybvth5d2" path="res://assets/svu.png" id="3_fcfvj"]
-[ext_resource type="PackedScene" uid="uid://c6j82aopfh2nk" path="res://scenes/player/ryhor.tscn" id="4_4nkto"]
 [ext_resource type="Script" uid="uid://venws50xx1oe" path="res://scripts/ui.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bdsoha8t3xrle" path="res://scenes/enemy.tscn" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://b10ogv1f2yp6m" path="res://scenes/player/chloe.tscn" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://b322bb2k68yhn" path="res://scenes/pause.tscn" id="7_pa8r4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
@@ -88,6 +88,14 @@ z_index = 2
 tile_map_data = PackedByteArray("AAAHAAMAAAACAAAAAAAKAAMAAAABAAAAAAAhAPX/AAAHAAAAAAAlAPX/AAAJAAAAAAAoAPb/AAAIAAAAAAAnAP//AAACAAAAAAAbAP//AAACAAAAAAALABcAAAACAAAAAAAWAP//AAABAAAAAAAgAP//AAABAAAAAAAiAAkAAAABAAAAAAASAAUAAAACAAAAAFASAP//AAABAAAAAAAPAP//AAACAAAAAAAgAA4AAAACAAAAAFAaAA8AAAACAAAAADAmAAcAAAAEAAAAAAA=")
 tile_set = SubResource("TileSet_tefeu")
 
+[node name="Chloe" parent="." unique_id=1019906128 instance=ExtResource("6_fcfvj")]
+position = Vector2(115, 105)
+
+[node name="Camera2D" type="Camera2D" parent="Chloe" unique_id=2116112871]
+position = Vector2(0, 1)
+scale = Vector2(0.5, 0.5)
+zoom = Vector2(1.5, 1.5)
+
 [node name="UI" type="CanvasLayer" parent="." unique_id=834026149]
 layer = 4
 script = ExtResource("4_jyhfs")
@@ -134,14 +142,6 @@ texture = ExtResource("3_fcfvj")
 process_mode = 3
 z_index = 5
 position = Vector2(-217, 12)
-
-[node name="Ryhor" parent="." unique_id=1019906128 instance=ExtResource("4_4nkto")]
-position = Vector2(116, 113)
-
-[node name="Camera2D" type="Camera2D" parent="Ryhor" unique_id=2116112871]
-position = Vector2(-13, 0)
-scale = Vector2(0.5, 0.5)
-zoom = Vector2(1.5, 1.5)
 
 [node name="Enemy" parent="." unique_id=1081668143 instance=ExtResource("4_tbgi4")]
 position = Vector2(562, -108)

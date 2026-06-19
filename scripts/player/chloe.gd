@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var speed = 120
 @export var friction = 0.4
 @export var acceleration = 0.45
-@onready var raycast_shoot: RayCast2D = $RaycastShoot
 @onready var shoot_sound: AudioStreamPlayer2D = $ShootSound
 @onready var reload_sound: AudioStreamPlayer2D = $ReloadSound
 @onready var ammo_label: Label = $"../UI/Ammo"
@@ -14,6 +13,10 @@ extends CharacterBody2D
 @onready var crosshair: Sprite2D = $Crosshair
 @onready var hitmarker_timer: Timer = $HitmarkerTimer
 @onready var reload_timer: Timer = $ReloadTimer
+@onready var raycast_shoot: RayCast2D = $RaycastShoot
+@onready var raycast_shoot_2: RayCast2D = $RaycastShoot2
+@onready var raycast_shoot_3: RayCast2D = $RaycastShoot3
+@onready var raycast_shoot_4: RayCast2D = $RaycastShoot4
 
 var player_health = 100
 var ammo = 11
@@ -46,7 +49,31 @@ func get_input():
 						collider.enemy_health -= 100
 						crosshair.modulate = Color.RED
 						hitmarker_timer.start()
-				
+				if raycast_shoot.is_colliding():
+					var collider = raycast_shoot_2.get_collider()
+					if collider is TileMapLayer:
+						pass
+					elif collider is CharacterBody2D:
+						collider.enemy_health -= 100
+						crosshair.modulate = Color.RED
+						hitmarker_timer.start()
+				if raycast_shoot.is_colliding():
+					var collider = raycast_shoot_3.get_collider()
+					if collider is TileMapLayer:
+						pass
+					elif collider is CharacterBody2D:
+						collider.enemy_health -= 100
+						crosshair.modulate = Color.RED
+						hitmarker_timer.start()
+				if raycast_shoot.is_colliding():
+					var collider = raycast_shoot_4.get_collider()
+					if collider is TileMapLayer:
+						pass
+					elif collider is CharacterBody2D:
+						collider.enemy_health -= 100
+						crosshair.modulate = Color.RED
+						hitmarker_timer.start()
+			
 	if Input.is_action_pressed('move_right'):
 		input.x += 1
 		$AnimatedSprite2D2.play('walk')
