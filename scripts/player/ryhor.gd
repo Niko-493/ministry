@@ -16,7 +16,7 @@ extends CharacterBody2D
 @onready var reload_timer: Timer = $ReloadTimer
 
 var player_health = 100
-var ammo = 11
+var ammo = 10
 var spare_mag = 8
 var is_reloading = false
 

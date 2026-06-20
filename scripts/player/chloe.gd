@@ -19,8 +19,8 @@ extends CharacterBody2D
 @onready var raycast_shoot_4: RayCast2D = $RaycastShoot4
 
 var player_health = 100
-var ammo = 11
-var spare_mag = 8
+var ammo = 7
+var spare_mag = 9
 var is_reloading = false
 
 func _process(delta: float) -> void:
@@ -89,7 +89,7 @@ func get_input():
 	
 	if Input.is_action_just_pressed("reload"):
 		if spare_mag >=1:
-			ammo = 11
+			ammo = 7
 			spare_mag -= 1
 			update_ammo_ui()
 			reload_sound.play()
