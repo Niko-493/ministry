@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://crwlqenfdwmk5"]
 
 [ext_resource type="Texture2D" uid="uid://bvdrfp7tx04ug" path="res://assets/wiptileset.png" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bo61roilvppai" path="res://scenes/player/maryja.tscn" id="2_4nkto"]
 [ext_resource type="Script" uid="uid://venws50xx1oe" path="res://scripts/ui.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bdsoha8t3xrle" path="res://scenes/enemy.tscn" id="4_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://b10ogv1f2yp6m" path="res://scenes/player/chloe.tscn" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://b322bb2k68yhn" path="res://scenes/pause.tscn" id="7_pa8r4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
@@ -87,11 +87,11 @@ z_index = 2
 tile_map_data = PackedByteArray("AAAHAAMAAAACAAAAAAAKAAMAAAABAAAAAAAhAPX/AAAHAAAAAAAlAPX/AAAJAAAAAAAoAPb/AAAIAAAAAAAnAP//AAACAAAAAAAbAP//AAACAAAAAAALABcAAAACAAAAAAAWAP//AAABAAAAAAAgAP//AAABAAAAAAAiAAkAAAABAAAAAAASAAUAAAACAAAAAFASAP//AAABAAAAAAAPAP//AAACAAAAAAAgAA4AAAACAAAAAFAaAA8AAAACAAAAADAmAAcAAAAEAAAAAAA=")
 tile_set = SubResource("TileSet_tefeu")
 
-[node name="Chloe" parent="." unique_id=1019906128 instance=ExtResource("6_fcfvj")]
-position = Vector2(115, 105)
+[node name="Maryja" parent="." unique_id=1019906128 instance=ExtResource("2_4nkto")]
+position = Vector2(107, 103)
 
-[node name="Camera2D" type="Camera2D" parent="Chloe" unique_id=2116112871]
-position = Vector2(0, 1)
+[node name="Camera2D" type="Camera2D" parent="Maryja" unique_id=2116112871]
+position = Vector2(-2, -1)
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(1.5, 1.5)
 
@@ -157,6 +157,26 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Enemy5" parent="." unique_id=1398391909 instance=ExtResource("4_tbgi4")]
 position = Vector2(274, 462)
+scale = Vector2(0.5, 0.5)
+
+[node name="Enemy7" parent="." unique_id=1230576319 instance=ExtResource("4_tbgi4")]
+position = Vector2(275, 236)
+scale = Vector2(0.5, 0.5)
+
+[node name="Enemy8" parent="." unique_id=1769879570 instance=ExtResource("4_tbgi4")]
+position = Vector2(280, 176)
+scale = Vector2(0.5, 0.5)
+
+[node name="Enemy9" parent="." unique_id=1802441992 instance=ExtResource("4_tbgi4")]
+position = Vector2(242, 283)
+scale = Vector2(0.5, 0.5)
+
+[node name="Enemy10" parent="." unique_id=137569609 instance=ExtResource("4_tbgi4")]
+position = Vector2(276, 307)
+scale = Vector2(0.5, 0.5)
+
+[node name="Enemy11" parent="." unique_id=361299356 instance=ExtResource("4_tbgi4")]
+position = Vector2(271, 134)
 scale = Vector2(0.5, 0.5)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=287079624]

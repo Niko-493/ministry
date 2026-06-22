@@ -1,0 +1,254 @@
+[gd_scene format=3 uid="uid://bo61roilvppai"]
+
+[ext_resource type="Script" uid="uid://dqe11kqdo86wm" path="res://scripts/player/maryja.gd" id="1_04ea7"]
+[ext_resource type="Texture2D" uid="uid://dyygjmc3b5xkf" path="res://assets/player/ChloeSheet1.png" id="2_xd5v4"]
+[ext_resource type="Texture2D" uid="uid://duchktl27a3n6" path="res://assets/player/ChloeSheet2.png" id="3_rdfn6"]
+[ext_resource type="AudioStream" uid="uid://dwqooh2jy33e0" path="res://assets/sfx/smg.ogg" id="4_04ea7"]
+[ext_resource type="AudioStream" uid="uid://ioc1t3f3cg5y" path="res://assets/Equip1.ogg" id="5_703pe"]
+[ext_resource type="Texture2D" uid="uid://bywh22w54e8bs" path="res://assets/wipmuzzleflash.png" id="6_k617f"]
+[ext_resource type="Texture2D" uid="uid://jsvtt7045xfu" path="res://assets/wipcrosshair.png" id="7_sl6ie"]
+[ext_resource type="Script" uid="uid://cpi5so5iyp352" path="res://scripts/crosshair.gd" id="8_hbbsb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0rn5"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6t08"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26mud"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkter"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3q14"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqdnq"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugng7"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7ysx"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_derx8"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqjj6"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0jfs"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jp8v6"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhr5c"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu8rm"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_708n5"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn861"]
+atlas = ExtResource("2_xd5v4")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u6t08"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0rn5")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6t08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26mud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkter")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3q14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqdnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugng7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7ysx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_derx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqjj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0jfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jp8v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhr5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu8rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_708n5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn861")
+}],
+"loop": false,
+"name": &"reload",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iartw"]
+atlas = ExtResource("3_rdfn6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwnoe"]
+atlas = ExtResource("3_rdfn6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8aji2"]
+atlas = ExtResource("3_rdfn6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_26mud"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iartw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwnoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8aji2")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 12.0
+height = 24.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1m3v6"]
+size = Vector2(19, 5)
+
+[node name="Maryja" type="CharacterBody2D" unique_id=1019906128 groups=["Player"]]
+z_index = 1
+script = ExtResource("1_04ea7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=802033293]
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_u6t08")
+animation = &"idle"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1321740209]
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_26mud")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1357827285]
+position = Vector2(-4, 0)
+shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=870134630]
+position = Vector2(14, 6.5)
+shape = SubResource("RectangleShape2D_1m3v6")
+
+[node name="RaycastShoot" type="RayCast2D" parent="." unique_id=1112060478]
+position = Vector2(24, 6)
+target_position = Vector2(1000, 0)
+collide_with_areas = true
+
+[node name="RaycastShoot2" type="RayCast2D" parent="." unique_id=1740708947]
+position = Vector2(24, 4.9999995)
+rotation = -0.23212878
+target_position = Vector2(1000, 0)
+collide_with_areas = true
+
+[node name="RaycastShoot3" type="RayCast2D" parent="." unique_id=59815824]
+position = Vector2(23.999998, 6.999998)
+rotation = 0.108210415
+target_position = Vector2(1000, 0)
+collide_with_areas = true
+
+[node name="RaycastShoot4" type="RayCast2D" parent="." unique_id=441687399]
+position = Vector2(23.999998, 8)
+rotation = 0.25307274
+target_position = Vector2(1000, 0)
+collide_with_areas = true
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=8528024]
+stream = ExtResource("4_04ea7")
+
+[node name="ReloadSound" type="AudioStreamPlayer2D" parent="." unique_id=869512756]
+stream = ExtResource("5_703pe")
+
+[node name="MuzzleFlash" type="Sprite2D" parent="." unique_id=518532208]
+visible = false
+position = Vector2(33, 7.0000005)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_k617f")
+
+[node name="Crosshair" type="Sprite2D" parent="." unique_id=7570117]
+texture = ExtResource("7_sl6ie")
+script = ExtResource("8_hbbsb")
+
+[node name="MuzzleFlashTimer" type="Timer" parent="." unique_id=179007942]
+wait_time = 0.05
+one_shot = true
+
+[node name="ReloadTimer" type="Timer" parent="." unique_id=217015817]
+wait_time = 1.7999999999999998
+one_shot = true
+
+[node name="HitmarkerTimer" type="Timer" parent="." unique_id=1640146448]
+wait_time = 0.05
+one_shot = true
+
+[node name="FirerateTimer" type="Timer" parent="." unique_id=424393029]
+wait_time = 0.11
+
+[connection signal="timeout" from="MuzzleFlashTimer" to="." method="_on_muzzle_flash_timer_timeout"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]
+[connection signal="timeout" from="HitmarkerTimer" to="." method="_on_hitmarker_timer_timeout"]
+[connection signal="timeout" from="FirerateTimer" to="." method="_on_firerate_timer_timeout"]
