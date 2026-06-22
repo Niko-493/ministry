@@ -12,7 +12,7 @@ extends CharacterBody2D
 var enemy_health = 100
 var enemy_alive = true
 var shoot_timer = 0.0
-var fire_rate = 0.6
+var fire_rate = 0.2
 var enemy_speed = 100
 var enemy_idle = true
 
@@ -28,8 +28,13 @@ func die():
 	
 
 func enemy_fire():
-	if randf() < 0.8:
-		Player.player_health -= 100
+	enemy_shoot.play()
+	enemy_muzzle_flash.visible = true
+	enemy_muzzle_flash_timer.start()		
+	if randf() < 0.5:
+		Player.player_health -= 50		
+		Player.update_health_ui()
+		shoot_timer = fire_rate
 
 func _physics_process(delta: float) -> void:
 	if enemy_alive == true:

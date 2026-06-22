@@ -30,7 +30,7 @@ func get_input():
 	
 	if Input.is_action_pressed("shoot"):
 		for e in enemies:
-			if randf() < 0.01:
+			if randf() < 0.0001:
 				e.enemy_idle = false
 		if is_reloading == false:
 			if firerate_timer.is_stopped():
