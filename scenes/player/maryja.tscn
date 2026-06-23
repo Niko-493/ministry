@@ -110,7 +110,7 @@ radius = 12.0
 height = 24.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1m3v6"]
-size = Vector2(19, 5)
+size = Vector2(15.5, 5)
 
 [node name="Maryja" type="CharacterBody2D" unique_id=1019906128 groups=["Player"]]
 z_index = 1
@@ -135,29 +135,11 @@ position = Vector2(-4, 0)
 shape = SubResource("CapsuleShape2D_g2els")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=870134630]
-position = Vector2(14, 6.5)
+position = Vector2(12.25, 6.5)
 shape = SubResource("RectangleShape2D_1m3v6")
 
 [node name="RaycastShoot" type="RayCast2D" parent="." unique_id=1112060478]
-position = Vector2(24, 6)
-target_position = Vector2(1000, 0)
-collide_with_areas = true
-
-[node name="RaycastShoot2" type="RayCast2D" parent="." unique_id=1740708947]
-position = Vector2(24, 4.9999995)
-rotation = -0.23212878
-target_position = Vector2(1000, 0)
-collide_with_areas = true
-
-[node name="RaycastShoot3" type="RayCast2D" parent="." unique_id=59815824]
-position = Vector2(23.999998, 6.999998)
-rotation = 0.108210415
-target_position = Vector2(1000, 0)
-collide_with_areas = true
-
-[node name="RaycastShoot4" type="RayCast2D" parent="." unique_id=441687399]
-position = Vector2(23.999998, 8)
-rotation = 0.25307274
+position = Vector2(20, 5)
 target_position = Vector2(1000, 0)
 collide_with_areas = true
 
@@ -169,7 +151,7 @@ stream = ExtResource("5_703pe")
 
 [node name="MuzzleFlash" type="Sprite2D" parent="." unique_id=518532208]
 visible = false
-position = Vector2(33, 7.0000005)
+position = Vector2(29, 6)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_k617f")
 
