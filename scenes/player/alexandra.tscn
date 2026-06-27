@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cf31l6j5vd0s3"]
 
-[ext_resource type="Script" uid="uid://dqe11kqdo86wm" path="res://scripts/player/maryja.gd" id="1_3lx2x"]
+[ext_resource type="Script" uid="uid://cyah3fwsdekdm" path="res://scripts/player/alexandra.gd" id="1_3lx2x"]
 [ext_resource type="Texture2D" uid="uid://1bsusxpurc8j" path="res://assets/player/AlexandraSheet1.png" id="2_tv1q2"]
 [ext_resource type="Texture2D" uid="uid://g7wxc1jgwyy6" path="res://assets/player/AlexandraSheet2.png" id="3_3lx2x"]
 [ext_resource type="AudioStream" uid="uid://c5y1edkbe66oy" path="res://assets/sfx/sniper.ogg" id="4_3lx2x"]
