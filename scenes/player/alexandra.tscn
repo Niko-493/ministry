@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://cf31l6j5vd0s3"]
+
+[ext_resource type="Script" uid="uid://dqe11kqdo86wm" path="res://scripts/player/maryja.gd" id="1_3lx2x"]
+[ext_resource type="Texture2D" uid="uid://1bsusxpurc8j" path="res://assets/player/AlexandraSheet1.png" id="2_tv1q2"]
+[ext_resource type="Texture2D" uid="uid://g7wxc1jgwyy6" path="res://assets/player/AlexandraSheet2.png" id="3_3lx2x"]
+[ext_resource type="AudioStream" uid="uid://c5y1edkbe66oy" path="res://assets/sfx/sniper.ogg" id="4_3lx2x"]
+[ext_resource type="AudioStream" uid="uid://ioc1t3f3cg5y" path="res://assets/Equip1.ogg" id="5_t4ccb"]
+[ext_resource type="Texture2D" uid="uid://bywh22w54e8bs" path="res://assets/wipmuzzleflash.png" id="6_31bw6"]
+[ext_resource type="Texture2D" uid="uid://jsvtt7045xfu" path="res://assets/wipcrosshair.png" id="7_evwq4"]
+[ext_resource type="Script" uid="uid://cpi5so5iyp352" path="res://scripts/crosshair.gd" id="8_ck44q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lx2x"]
+atlas = ExtResource("2_tv1q2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydx3w"]
+atlas = ExtResource("2_tv1q2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tcqs"]
+atlas = ExtResource("2_tv1q2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgkm5"]
+atlas = ExtResource("2_tv1q2")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4ccb"]
+atlas = ExtResource("2_tv1q2")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31bw6"]
+atlas = ExtResource("2_tv1q2")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evwq4"]
+atlas = ExtResource("2_tv1q2")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck44q"]
+atlas = ExtResource("2_tv1q2")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6wg5h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lx2x")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydx3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tcqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgkm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4ccb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31bw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evwq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck44q")
+}],
+"loop": false,
+"name": &"reload",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wg5h"]
+atlas = ExtResource("3_3lx2x")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh7ro"]
+atlas = ExtResource("3_3lx2x")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mru5"]
+atlas = ExtResource("3_3lx2x")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7hit"]
+atlas = ExtResource("3_3lx2x")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dh7ro"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wg5h")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh7ro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mru5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7hit")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 12.0
+height = 24.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1m3v6"]
+size = Vector2(15.5, 5)
+
+[node name="Alexandra" type="CharacterBody2D" unique_id=1019906128 groups=["Player"]]
+z_index = 1
+script = ExtResource("1_3lx2x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=802033293]
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_6wg5h")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1321740209]
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_dh7ro")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1357827285]
+position = Vector2(-4, 0)
+shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=870134630]
+position = Vector2(12.25, 6.5)
+shape = SubResource("RectangleShape2D_1m3v6")
+
+[node name="RaycastShoot" type="RayCast2D" parent="." unique_id=1112060478]
+position = Vector2(20, 5)
+target_position = Vector2(1000, 0)
+collide_with_areas = true
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=8528024]
+stream = ExtResource("4_3lx2x")
+
+[node name="ReloadSound" type="AudioStreamPlayer2D" parent="." unique_id=869512756]
+stream = ExtResource("5_t4ccb")
+
+[node name="MuzzleFlash" type="Sprite2D" parent="." unique_id=518532208]
+visible = false
+position = Vector2(29, 6)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_31bw6")
+
+[node name="Crosshair" type="Sprite2D" parent="." unique_id=7570117]
+texture = ExtResource("7_evwq4")
+script = ExtResource("8_ck44q")
+
+[node name="MuzzleFlashTimer" type="Timer" parent="." unique_id=179007942]
+wait_time = 0.05
+one_shot = true
+
+[node name="ReloadTimer" type="Timer" parent="." unique_id=217015817]
+wait_time = 0.9
+one_shot = true
+
+[node name="HitmarkerTimer" type="Timer" parent="." unique_id=1640146448]
+wait_time = 0.05
+one_shot = true
+
+[node name="FirerateTimer" type="Timer" parent="." unique_id=424393029]
+wait_time = 0.1
+
+[connection signal="timeout" from="MuzzleFlashTimer" to="." method="_on_muzzle_flash_timer_timeout"]
+[connection signal="timeout" from="ReloadTimer" to="." method="_on_reload_timer_timeout"]
+[connection signal="timeout" from="HitmarkerTimer" to="." method="_on_hitmarker_timer_timeout"]
+[connection signal="timeout" from="FirerateTimer" to="." method="_on_firerate_timer_timeout"]

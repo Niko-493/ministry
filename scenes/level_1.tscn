@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://crwlqenfdwmk5"]
 
 [ext_resource type="Texture2D" uid="uid://bvdrfp7tx04ug" path="res://assets/wiptileset.png" id="1_sugp2"]
-[ext_resource type="PackedScene" uid="uid://bo61roilvppai" path="res://scenes/player/maryja.tscn" id="2_4nkto"]
+[ext_resource type="PackedScene" uid="uid://cf31l6j5vd0s3" path="res://scenes/player/alexandra.tscn" id="2_4nkto"]
 [ext_resource type="Script" uid="uid://venws50xx1oe" path="res://scripts/ui.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bdsoha8t3xrle" path="res://scenes/enemy.tscn" id="4_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b322bb2k68yhn" path="res://scenes/pause.tscn" id="7_pa8r4"]
@@ -87,11 +87,11 @@ z_index = 2
 tile_map_data = PackedByteArray("AAAHAAMAAAACAAAAAAAKAAMAAAABAAAAAAAhAPX/AAAHAAAAAAAlAPX/AAAJAAAAAAAoAPb/AAAIAAAAAAAnAP//AAACAAAAAAAbAP//AAACAAAAAAALABcAAAACAAAAAAAWAP//AAABAAAAAAAgAP//AAABAAAAAAAiAAkAAAABAAAAAAASAAUAAAACAAAAAFASAP//AAABAAAAAAAPAP//AAACAAAAAAAgAA4AAAACAAAAAFAaAA8AAAACAAAAADAmAAcAAAAEAAAAAAA=")
 tile_set = SubResource("TileSet_tefeu")
 
-[node name="Maryja" parent="." unique_id=1019906128 instance=ExtResource("2_4nkto")]
-position = Vector2(107, 103)
+[node name="Alexandra" parent="." unique_id=1019906128 instance=ExtResource("2_4nkto")]
+position = Vector2(76, 108)
 
-[node name="Camera2D" type="Camera2D" parent="Maryja" unique_id=2116112871]
-position = Vector2(-2, -1)
+[node name="Camera2D" type="Camera2D" parent="Alexandra" unique_id=2116112871]
+position = Vector2(-2, -2)
 scale = Vector2(0.5, 0.5)
 zoom = Vector2(1.5, 1.5)
 

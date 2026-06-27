@@ -17,8 +17,8 @@ extends CharacterBody2D
 @onready var firerate_timer: Timer = $FirerateTimer
 
 var player_health = 100
-var ammo = 64
-var spare_mag = 4
+var ammo = 30
+var spare_mag = 7
 var is_reloading = false
 
 func _process(delta: float) -> void:
@@ -66,7 +66,7 @@ func get_input():
 	
 	if Input.is_action_just_pressed("reload"):
 		if spare_mag >=1:
-			ammo = 64
+			ammo = 30
 			spare_mag -= 1
 			update_ammo_ui()
 			reload_sound.play()

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cjfafkb83bdxr"]
+
+[ext_resource type="Script" uid="uid://c2xscvxn3uk0s" path="res://scripts/test_intro.gd" id="1_4o6f6"]
+[ext_resource type="Texture2D" uid="uid://dslspra5bgq7j" path="res://assets/sampletext.png" id="2_k5c8s"]
+
+[node name="TestIntro" type="Control" unique_id=1009962588]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4o6f6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1918046690]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 281.0
+offset_right = 399.0
+offset_bottom = 321.0
+theme_override_font_sizes/normal_font_size = 30
+text = "SAMPLE TEXT"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=744997714]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 54.0
+offset_right = 599.0
+offset_bottom = 241.0
+texture = ExtResource("2_k5c8s")
+expand_mode = 1
