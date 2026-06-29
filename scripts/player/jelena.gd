@@ -10,7 +10,6 @@ extends CharacterBody2D
 @onready var health_label: Label = $"../UI/Health"
 @onready var muzzle_flash: Sprite2D = $MuzzleFlash
 @onready var muzzle_flash_timer: Timer = $MuzzleFlashTimer
-@onready var enemies = get_tree().get_nodes_in_group("Enemies")
 @onready var crosshair: Sprite2D = $Crosshair
 @onready var hitmarker_timer: Timer = $HitmarkerTimer
 @onready var reload_timer: Timer = $ReloadTimer
@@ -29,9 +28,6 @@ func get_input():
 	var input = Vector2()
 	
 	if Input.is_action_pressed("shoot"):
-		for e in enemies:
-			if randf() < 0.0001:
-				e.enemy_idle = false
 		if is_reloading == false:
 			if firerate_timer.is_stopped():
 				if ammo >= 1:
@@ -47,7 +43,7 @@ func get_input():
 						if collider is TileMapLayer:
 							pass
 						elif collider is CharacterBody2D:
-							collider.enemy_health -= 75
+							collider.enemy_health -= 100
 							crosshair.modulate = Color.RED
 							hitmarker_timer.start()
 				

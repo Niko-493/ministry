@@ -148,7 +148,6 @@ shape = SubResource("RectangleShape2D_1m3v6")
 [node name="RaycastShoot" type="RayCast2D" parent="." unique_id=1112060478]
 position = Vector2(20, 5)
 target_position = Vector2(1000, 0)
-collide_with_areas = true
 
 [node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=8528024]
 stream = ExtResource("4_l0lpg")

@@ -138,5 +138,23 @@ position = Vector2(-217, 12)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=287079624]
 navigation_polygon = SubResource("NavigationPolygon_jyhfs")
 
-[node name="Handgunner" parent="." unique_id=1081668143 instance=ExtResource("5_4nkto")]
-position = Vector2(425, 80)
+[node name="Handgunner2" parent="." unique_id=718781507 instance=ExtResource("5_4nkto")]
+position = Vector2(385, 161)
+
+[node name="Handgunner3" parent="." unique_id=1207591213 instance=ExtResource("5_4nkto")]
+position = Vector2(269, 205)
+
+[node name="Handgunner4" parent="." unique_id=1109676691 instance=ExtResource("5_4nkto")]
+position = Vector2(175, 433)
+
+[node name="Handgunner5" parent="." unique_id=585946738 instance=ExtResource("5_4nkto")]
+position = Vector2(300, 436)
+
+[node name="Handgunner6" parent="." unique_id=913299897 instance=ExtResource("5_4nkto")]
+position = Vector2(267, 286)
+
+[node name="Handgunner7" parent="." unique_id=1101513601 instance=ExtResource("5_4nkto")]
+position = Vector2(504, 36)
+
+[node name="Handgunner8" parent="." unique_id=374455508 instance=ExtResource("5_4nkto")]
+position = Vector2(544, -126)
