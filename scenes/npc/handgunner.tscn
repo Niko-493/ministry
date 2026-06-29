@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dptitadqnkdn4"]
+
+[ext_resource type="Script" uid="uid://648qbvgdrya8" path="res://scripts/npc/handgunner.gd" id="1_um4ja"]
+[ext_resource type="Texture2D" uid="uid://rwnmpdthd412" path="res://assets/enemy.png" id="2_shk5s"]
+[ext_resource type="AudioStream" uid="uid://bc0ckts3b57il" path="res://assets/sfx/rifle.ogg" id="3_pm5yl"]
+[ext_resource type="Texture2D" uid="uid://bywh22w54e8bs" path="res://assets/wipmuzzleflash.png" id="4_tbs0p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7p1mj"]
+radius = 4.0
+height = 14.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
+size = Vector2(21, 4)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_um4ja"]
+radius = 222.00226
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_shk5s"]
+radius = 94.04786
+
+[node name="Handgunner" type="CharacterBody2D" unique_id=1081668143 groups=["Enemies"]]
+script = ExtResource("1_um4ja")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1022743280]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_shk5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1861671818]
+position = Vector2(-3, 0)
+shape = SubResource("CapsuleShape2D_7p1mj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1644529553]
+position = Vector2(4.5, -5)
+shape = SubResource("RectangleShape2D_5uy6h")
+
+[node name="EnemyShoot" type="AudioStreamPlayer2D" parent="." unique_id=1703552767]
+stream = ExtResource("3_pm5yl")
+volume_db = -5.0
+
+[node name="EnemyRaycast" type="RayCast2D" parent="." unique_id=1460014100]
+position = Vector2(15, -6)
+target_position = Vector2(500, 0)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=892295646]
+position = Vector2(-12, -1)
+rect = Rect2(-10, -20, 26, 41)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=733476676]
+avoidance_enabled = true
+
+[node name="EnemyMuzzleFlash" type="Sprite2D" parent="." unique_id=1621472416]
+visible = false
+position = Vector2(57, -16)
+scale = Vector2(2, 2)
+texture = ExtResource("4_tbs0p")
+
+[node name="EnemyMuzzleFlashTimer" type="Timer" parent="." unique_id=554321785]
+wait_time = 0.05
+
+[node name="EnemyFireTimer" type="Timer" parent="." unique_id=1780905908]
+wait_time = 2.0
+
+[node name="DetectionRange" type="Area2D" parent="." unique_id=62834227]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRange" unique_id=765998750]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_um4ja")
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=1499378907]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=1416507087]
+shape = SubResource("CircleShape2D_shk5s")
+
+[connection signal="timeout" from="EnemyMuzzleFlashTimer" to="." method="_on_enemy_muzzle_flash_timer_timeout"]
+[connection signal="timeout" from="EnemyFireTimer" to="." method="_on_enemy_fire_timer_timeout"]
+[connection signal="body_entered" from="DetectionRange" to="." method="_on_detection_range_body_entered"]
+[connection signal="body_exited" from="DetectionRange" to="." method="_on_detection_range_body_exited"]
+[connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="AttackRange" to="." method="_on_attack_range_body_exited"]

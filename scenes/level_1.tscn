@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bvdrfp7tx04ug" path="res://assets/wiptileset.png" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c1kiyanc1ops3" path="res://scenes/player/jelena.tscn" id="2_4nkto"]
 [ext_resource type="Script" uid="uid://venws50xx1oe" path="res://scripts/ui.gd" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://bdsoha8t3xrle" path="res://scenes/enemy.tscn" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dptitadqnkdn4" path="res://scenes/npc/handgunner.tscn" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://b322bb2k68yhn" path="res://scenes/pause.tscn" id="7_pa8r4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
@@ -135,49 +135,8 @@ process_mode = 3
 z_index = 5
 position = Vector2(-217, 12)
 
-[node name="Enemy" parent="." unique_id=1081668143 instance=ExtResource("4_tbgi4")]
-position = Vector2(562, -108)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy2" parent="." unique_id=1455840544 instance=ExtResource("4_tbgi4")]
-position = Vector2(504, 47)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy3" parent="." unique_id=1398692662 instance=ExtResource("4_tbgi4")]
-position = Vector2(376, 210)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy6" parent="." unique_id=1329760397 instance=ExtResource("4_tbgi4")]
-position = Vector2(243, 204)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy4" parent="." unique_id=299749827 instance=ExtResource("4_tbgi4")]
-position = Vector2(140, 415)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy5" parent="." unique_id=1398391909 instance=ExtResource("4_tbgi4")]
-position = Vector2(274, 462)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy7" parent="." unique_id=1230576319 instance=ExtResource("4_tbgi4")]
-position = Vector2(275, 236)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy8" parent="." unique_id=1769879570 instance=ExtResource("4_tbgi4")]
-position = Vector2(280, 176)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy9" parent="." unique_id=1802441992 instance=ExtResource("4_tbgi4")]
-position = Vector2(242, 283)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy10" parent="." unique_id=137569609 instance=ExtResource("4_tbgi4")]
-position = Vector2(276, 307)
-scale = Vector2(0.5, 0.5)
-
-[node name="Enemy11" parent="." unique_id=361299356 instance=ExtResource("4_tbgi4")]
-position = Vector2(271, 134)
-scale = Vector2(0.5, 0.5)
-
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=287079624]
 navigation_polygon = SubResource("NavigationPolygon_jyhfs")
+
+[node name="Handgunner" parent="." unique_id=1081668143 instance=ExtResource("5_4nkto")]
+position = Vector2(425, 80)
