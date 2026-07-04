@@ -41,6 +41,7 @@ func _physics_process(delta: float) -> void:
 	if enemy_health <= 0:
 		current_state = State.DEAD
 		
+		
 	enemy_detect_raycast.target_position = Player.global_position - enemy_detect_raycast.global_position
 	enemy_detect_raycast.force_raycast_update()
 	var collider = enemy_detect_raycast.get_collider()

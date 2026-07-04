@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://qrkpuwl1g8ft"]
+
+[ext_resource type="Script" uid="uid://25usvixmok2d" path="res://scripts/levels/level0/level_0_dialogue.gd" id="1_2i70y"]
+[ext_resource type="Texture2D" uid="uid://dslspra5bgq7j" path="res://assets/sampletext.png" id="1_jseot"]
+
+[node name="Level0Dialogue" type="Control" unique_id=1276844964]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2i70y")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1493313669]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 271.0
+offset_right = 524.0
+offset_bottom = 341.0
+theme_override_font_sizes/normal_font_size = 32
+text = "Sample text"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1643767020]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 37.0
+offset_right = 600.0
+offset_bottom = 233.0
+texture = ExtResource("1_jseot")
+expand_mode = 1

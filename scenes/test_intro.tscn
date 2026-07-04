@@ -29,3 +29,19 @@ offset_right = 599.0
 offset_bottom = 241.0
 texture = ExtResource("2_k5c8s")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1343539357]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 247.0
+offset_right = 550.0
+offset_bottom = 270.0
+text = "John Putin"
+
+[node name="Label2" type="Label" parent="." unique_id=1116130962]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 334.0
+offset_right = 521.0
+offset_bottom = 357.0
+text = "Press Enter mn"
