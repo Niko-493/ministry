@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 @onready var enemy_raycast: RayCast2D = $EnemyRaycast
-@onready var enemy_shoot: AudioStreamPlayer2D = $EnemyShoot
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var enemy_muzzle_flash: Sprite2D = $EnemyMuzzleFlash
 @onready var enemy_muzzle_flash_timer: Timer = $EnemyMuzzleFlashTimer
@@ -11,8 +10,7 @@ extends CharacterBody2D
 @onready var attack_range: Area2D = $AttackRange
 @onready var Player = get_tree().get_first_node_in_group("Player")
 @onready var enemy_detect_raycast: RayCast2D = $EnemyDetectRaycast
-
-
+@onready var enemy_shoot: AudioStreamPlayer2D = $EnemyShoot
 
 
 var enemy_health = 100
@@ -87,7 +85,6 @@ func dead_state():
 	$AnimatedSprite2D2.play('idle')
 	$CollisionShape2D.disabled = true
 	$CollisionShape2D2.disabled = true
-	
 	
 
 func _on_detection_range_body_entered(body: Node2D) -> void:

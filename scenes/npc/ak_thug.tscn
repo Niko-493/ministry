@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://dptitadqnkdn4"]
+[gd_scene format=3 uid="uid://bccileahpafg3"]
 
-[ext_resource type="Script" uid="uid://648qbvgdrya8" path="res://scripts/npc/handgunner.gd" id="1_um4ja"]
-[ext_resource type="Texture2D" uid="uid://bf8qrqcdw2vam" path="res://assets/npc/AKThugSheet1.png" id="2_shk5s"]
-[ext_resource type="AudioStream" uid="uid://bc0ckts3b57il" path="res://assets/sfx/rifle.ogg" id="3_pm5yl"]
-[ext_resource type="Texture2D" uid="uid://b1qruysn4wj63" path="res://assets/npc/AKThugSheet2.png" id="3_tbs0p"]
-[ext_resource type="Texture2D" uid="uid://bywh22w54e8bs" path="res://assets/wipmuzzleflash.png" id="4_tbs0p"]
+[ext_resource type="Script" uid="uid://d1wmcjkw2c0f" path="res://scripts/npc/ak_thug.gd" id="1_6mic5"]
+[ext_resource type="Texture2D" uid="uid://bf8qrqcdw2vam" path="res://assets/npc/AKThugSheet1.png" id="2_0qrsi"]
+[ext_resource type="Texture2D" uid="uid://b1qruysn4wj63" path="res://assets/npc/AKThugSheet2.png" id="3_3usag"]
+[ext_resource type="AudioStream" uid="uid://bc0ckts3b57il" path="res://assets/sfx/rifle.ogg" id="4_rtgtr"]
+[ext_resource type="Texture2D" uid="uid://bywh22w54e8bs" path="res://assets/wipmuzzleflash.png" id="5_32dib"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pm5yl"]
-atlas = ExtResource("2_shk5s")
+atlas = ExtResource("2_0qrsi")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbs0p"]
-atlas = ExtResource("2_shk5s")
+atlas = ExtResource("2_0qrsi")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ww5gc"]
-atlas = ExtResource("2_shk5s")
+atlas = ExtResource("2_0qrsi")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m55gy"]
@@ -46,23 +46,23 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_shk5s"]
-atlas = ExtResource("3_tbs0p")
+atlas = ExtResource("3_3usag")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wsoax"]
-atlas = ExtResource("3_tbs0p")
+atlas = ExtResource("3_3usag")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e36ma"]
-atlas = ExtResource("3_tbs0p")
+atlas = ExtResource("3_3usag")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j3pn2"]
-atlas = ExtResource("3_tbs0p")
+atlas = ExtResource("3_3usag")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nvsui"]
-atlas = ExtResource("3_tbs0p")
+atlas = ExtResource("3_3usag")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ojm0j"]
@@ -106,9 +106,9 @@ radius = 140.12851
 [sub_resource type="CircleShape2D" id="CircleShape2D_shk5s"]
 radius = 61.008198
 
-[node name="Handgunner" type="CharacterBody2D" unique_id=1081668143 groups=["Enemies"]]
+[node name="AKThug" type="CharacterBody2D" unique_id=1081668143 groups=["Enemies"]]
 scale = Vector2(1.2, 1.2)
-script = ExtResource("1_um4ja")
+script = ExtResource("1_6mic5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=31039508]
 rotation = -1.5707964
@@ -131,7 +131,7 @@ position = Vector2(8, 6)
 shape = SubResource("RectangleShape2D_5uy6h")
 
 [node name="EnemyShoot" type="AudioStreamPlayer2D" parent="." unique_id=1703552767]
-stream = ExtResource("3_pm5yl")
+stream = ExtResource("4_rtgtr")
 volume_db = -5.0
 
 [node name="EnemyRaycast" type="RayCast2D" parent="." unique_id=1460014100]
@@ -148,7 +148,7 @@ avoidance_enabled = true
 [node name="EnemyMuzzleFlash" type="Sprite2D" parent="." unique_id=1621472416]
 visible = false
 position = Vector2(21, 5)
-texture = ExtResource("4_tbs0p")
+texture = ExtResource("5_32dib")
 
 [node name="EnemyMuzzleFlashTimer" type="Timer" parent="." unique_id=554321785]
 wait_time = 0.05

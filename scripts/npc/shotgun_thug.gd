@@ -13,8 +13,6 @@ extends CharacterBody2D
 @onready var enemy_detect_raycast: RayCast2D = $EnemyDetectRaycast
 
 
-
-
 var enemy_health = 100
 var enemy_speed = 100
 var enemy_shot_delay = false

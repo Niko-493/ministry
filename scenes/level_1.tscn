@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bvdrfp7tx04ug" path="res://assets/wiptileset.png" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c1kiyanc1ops3" path="res://scenes/player/jelena.tscn" id="2_4nkto"]
 [ext_resource type="Script" uid="uid://venws50xx1oe" path="res://scripts/ui.gd" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://dptitadqnkdn4" path="res://scenes/npc/handgunner.tscn" id="5_4nkto"]
+[ext_resource type="PackedScene" uid="uid://byxpcpkk0jvjl" path="res://scenes/npc/shotgun_thug.tscn" id="6_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://b322bb2k68yhn" path="res://scenes/pause.tscn" id="7_pa8r4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
@@ -93,7 +93,7 @@ position = Vector2(108, 116)
 [node name="Camera2D" type="Camera2D" parent="Jelena" unique_id=2116112871]
 position = Vector2(-3, 0)
 scale = Vector2(0.5, 0.5)
-zoom = Vector2(1.5, 1.5)
+zoom = Vector2(1.9, 1.9)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=834026149]
 layer = 4
@@ -138,23 +138,20 @@ position = Vector2(-217, 12)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=287079624]
 navigation_polygon = SubResource("NavigationPolygon_jyhfs")
 
-[node name="Handgunner2" parent="." unique_id=718781507 instance=ExtResource("5_4nkto")]
-position = Vector2(385, 161)
+[node name="ShotgunThug" parent="." unique_id=407212805 instance=ExtResource("6_fcfvj")]
+position = Vector2(389, 114)
 
-[node name="Handgunner3" parent="." unique_id=1207591213 instance=ExtResource("5_4nkto")]
-position = Vector2(269, 205)
+[node name="ShotgunThug2" parent="." unique_id=2086754583 instance=ExtResource("6_fcfvj")]
+position = Vector2(185, 433)
 
-[node name="Handgunner4" parent="." unique_id=1109676691 instance=ExtResource("5_4nkto")]
-position = Vector2(175, 433)
+[node name="ShotgunThug3" parent="." unique_id=1640056754 instance=ExtResource("6_fcfvj")]
+position = Vector2(454, 49)
 
-[node name="Handgunner5" parent="." unique_id=585946738 instance=ExtResource("5_4nkto")]
-position = Vector2(300, 436)
+[node name="ShotgunThug5" parent="." unique_id=1081668143 instance=ExtResource("6_fcfvj")]
+position = Vector2(298, 463)
 
-[node name="Handgunner6" parent="." unique_id=913299897 instance=ExtResource("5_4nkto")]
-position = Vector2(267, 286)
+[node name="ShotgunThug6" parent="." unique_id=253516953 instance=ExtResource("6_fcfvj")]
+position = Vector2(266, 259)
 
-[node name="Handgunner7" parent="." unique_id=1101513601 instance=ExtResource("5_4nkto")]
-position = Vector2(504, 36)
-
-[node name="Handgunner8" parent="." unique_id=374455508 instance=ExtResource("5_4nkto")]
-position = Vector2(544, -126)
+[node name="ShotgunThug4" parent="." unique_id=1433832956 instance=ExtResource("6_fcfvj")]
+position = Vector2(597, 79)

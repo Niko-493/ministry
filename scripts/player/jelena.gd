@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-@export var speed = 120
-@export var friction = 0.4
+@export var speed = 110
+@export var friction = 0.5
 @export var acceleration = 0.45
 @onready var raycast_shoot: RayCast2D = $RaycastShoot
 @onready var shoot_sound: AudioStreamPlayer2D = $ShootSound
@@ -14,6 +14,7 @@ extends CharacterBody2D
 @onready var hitmarker_timer: Timer = $HitmarkerTimer
 @onready var reload_timer: Timer = $ReloadTimer
 @onready var firerate_timer: Timer = $FirerateTimer
+@onready var hit_sound: AudioStreamPlayer2D = $HitSound
 
 var player_health = 100
 var ammo = 30
@@ -46,6 +47,7 @@ func get_input():
 							collider.enemy_health -= 100
 							crosshair.modulate = Color.RED
 							hitmarker_timer.start()
+							hit_sound.play()
 				
 	if Input.is_action_pressed('move_right'):
 		input.x += 1
