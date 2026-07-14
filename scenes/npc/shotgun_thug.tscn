@@ -144,6 +144,8 @@ target_position = Vector2(500, 0)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=733476676]
 avoidance_enabled = true
+radius = 32.0
+avoidance_layers = 2
 
 [node name="EnemyMuzzleFlash" type="Sprite2D" parent="." unique_id=1621472416]
 visible = false
