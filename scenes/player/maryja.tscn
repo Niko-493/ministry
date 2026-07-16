@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dwqooh2jy33e0" path="res://assets/sfx/smg.ogg" id="4_04ea7"]
 [ext_resource type="AudioStream" uid="uid://ioc1t3f3cg5y" path="res://assets/Equip1.ogg" id="5_703pe"]
 [ext_resource type="Texture2D" uid="uid://bywh22w54e8bs" path="res://assets/wipmuzzleflash.png" id="6_k617f"]
+[ext_resource type="AudioStream" uid="uid://c0jwrw7pykrx3" path="res://assets/sfx/bullet_impact.ogg" id="6_xd5v4"]
 [ext_resource type="Texture2D" uid="uid://jsvtt7045xfu" path="res://assets/wipcrosshair.png" id="7_sl6ie"]
 [ext_resource type="Script" uid="uid://cpi5so5iyp352" path="res://scripts/crosshair.gd" id="8_hbbsb"]
 
@@ -70,13 +71,21 @@ region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbbsb"]
 atlas = ExtResource("3_04ea7")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mjjv0"]
 atlas = ExtResource("3_04ea7")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhykl"]
+atlas = ExtResource("3_04ea7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52yxl"]
+atlas = ExtResource("3_04ea7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgxkc"]
 atlas = ExtResource("3_04ea7")
 region = Rect2(0, 32, 32, 32)
 
@@ -99,6 +108,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jhykl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52yxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgxkc")
 }],
 "loop": false,
 "name": &"walk",
@@ -106,42 +121,42 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
-radius = 12.0
-height = 24.0
+radius = 7.4999995
+height = 14.999999
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1m3v6"]
-size = Vector2(15.5, 5)
+size = Vector2(11.083333, 5)
 
 [node name="Maryja" type="CharacterBody2D" unique_id=1019906128 groups=["Player"]]
 z_index = 1
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_04ea7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=802033293]
 rotation = -1.5707964
-scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_sl6ie")
 animation = &"reload"
 autoplay = "idle"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1321740209]
 rotation = -1.5707964
-scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_hbbsb")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
+frame = 4
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1357827285]
-position = Vector2(-4, 0)
+position = Vector2(-5, -0.8333333)
 shape = SubResource("CapsuleShape2D_g2els")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=870134630]
-position = Vector2(12.25, 6.5)
+position = Vector2(7.791666, 4.1666665)
 shape = SubResource("RectangleShape2D_1m3v6")
 
 [node name="RaycastShoot" type="RayCast2D" parent="." unique_id=1112060478]
-position = Vector2(20, 5)
+position = Vector2(13, 3)
 target_position = Vector2(1000, 0)
-collide_with_areas = true
 
 [node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=8528024]
 stream = ExtResource("4_04ea7")
@@ -149,18 +164,23 @@ stream = ExtResource("4_04ea7")
 [node name="ReloadSound" type="AudioStreamPlayer2D" parent="." unique_id=869512756]
 stream = ExtResource("5_703pe")
 
-[node name="MuzzleFlash" type="Sprite2D" parent="." unique_id=518532208]
-visible = false
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=730609530]
 position = Vector2(29, 6)
 scale = Vector2(1.5, 1.5)
+stream = ExtResource("6_xd5v4")
+
+[node name="MuzzleFlash" type="Sprite2D" parent="." unique_id=518532208]
+visible = false
+position = Vector2(19.166666, 4.1666665)
 texture = ExtResource("6_k617f")
 
 [node name="Crosshair" type="Sprite2D" parent="." unique_id=7570117]
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("7_sl6ie")
 script = ExtResource("8_hbbsb")
 
 [node name="MuzzleFlashTimer" type="Timer" parent="." unique_id=179007942]
-wait_time = 0.05
+wait_time = 0.1
 one_shot = true
 
 [node name="ReloadTimer" type="Timer" parent="." unique_id=217015817]

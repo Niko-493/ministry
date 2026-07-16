@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dbhvbtkecvqes"]
+
+[ext_resource type="Script" uid="uid://bvb3vv0fy48ag" path="res://scripts/dialogue_box.gd" id="1_6uen5"]
+
+[node name="DialogueBox" type="CanvasLayer" unique_id=942679968]
+script = ExtResource("1_6uen5")
+
+[node name="Panel" type="Panel" parent="." unique_id=1284744363]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=1669452084]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1132491262]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
