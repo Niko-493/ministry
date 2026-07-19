@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dslspra5bgq7j" path="res://assets/sampletext.png" id="2_03bei"]
 
 [node name="DialogueBox" type="CanvasLayer" unique_id=942679968]
+process_mode = 3
 script = ExtResource("1_xd0ac")
 
 [node name="Panel" type="Panel" parent="." unique_id=1284744363]
-process_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

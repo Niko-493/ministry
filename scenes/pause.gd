@@ -3,14 +3,12 @@ extends Node2D
 @onready var pause_menu: Control = $PauseMenu
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pause_menu.visible = false
+	#temperary
 	var dialogue = preload("res://scenes/dialogue/dialogue_box1.tscn").instantiate()
 	get_tree().current_scene.add_child.call_deferred(dialogue)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause_game"): 
 		toggle_pause()
