@@ -6,7 +6,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pause_menu.visible = false
-	
+	var dialogue = preload("res://scenes/dialogue/dialogue_box1.tscn").instantiate()
+	get_tree().current_scene.add_child.call_deferred(dialogue)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

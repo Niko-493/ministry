@@ -73,6 +73,7 @@ func get_input():
 			is_reloading = true
 			reload_timer.start()
 			
+			
 	return input
 
 func _physics_process(delta):

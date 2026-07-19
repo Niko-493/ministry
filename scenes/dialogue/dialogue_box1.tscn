@@ -7,6 +7,7 @@
 script = ExtResource("1_xd0ac")
 
 [node name="Panel" type="Panel" parent="." unique_id=1284744363]
+process_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -18,6 +19,7 @@ offset_right = 151.0
 offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=1669452084]
 layout_mode = 0
